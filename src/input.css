@@ -1,0 +1,45 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+/* *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} */
+body {
+    font-family: "Almarai", sans-serif;
+    height: 100vh;
+    background-image: url('../imgs/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    /* background-size: contain; */
+}
+
+body::before {
+    content: '';
+    position: fixed; /* Covers the viewport */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.1); /* Semi-transparent black */
+    z-index: 0; /* Ensure it stays above other content */
+    pointer-events: none; /* Block interactions with underlying elements */
+}
+
+main {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+i{
+    background-color:rgba(0, 0, 0, 0.69) ;
+}
+
+button {
+    transition-duration: .8s;
+}
+
+button:hover {
+    scale: 1.2;
+}

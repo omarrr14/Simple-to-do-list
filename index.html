@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Simple to do list</title>
+        <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />        <link href="./src/output.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    </head>
+    <body>
+        
+        <header class="text-white text-lg py-8 flex justify-evenly z-10">
+            <div class="header-title">Today’s schedul</div>
+            <div class="today-date">
+                <span id="dayName">Thursday</span>
+                <span id="dayNum">11</span>
+            </div>
+        </header>
+
+        <main class="flex flex-col items-center mx-auto mt-2 z-10  w-4/5 md:w-1/4 h-4/5 rounded-lg text-white">
+            <audio src="ZXZ1TJ-9Y6Y.mp3"></audio>
+            <div class="py-6 w-full flex justify-center gap-5">
+                <input type="text" placeholder="Add a new Task" id="taskInput" class="w-2/3 px-2 py-1 outline-0 border rounded-lg">
+                <button id="addBTN" class="cursor-pointer"><i class="fa-solid fa-plus p-1 rounded-sm"></i></button>
+            </div>
+
+            <h4>Tasks To Do <span class="to-do-Num"></span></h4>
+
+            <div id="tasks-to-do" class="w-full pt-4 space-y-2">
+            </div>
+
+            <h4 class="pt-3">Complated Tasks <span class="done"></span></h4>
+
+            <div class="complated self-start w-full">
+                <!-- <div class="p-4 text-emerald-400 line-through">
+                    <p>Study React Fundamentals</p>
+                </div> -->
+            </div>
+        </main>
+
+        <script src="app.js"></script>
+    </body>
+</html>
