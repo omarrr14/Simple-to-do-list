@@ -7,7 +7,8 @@ const tasksToDo = document.querySelector('#tasks-to-do');
 const uncomplatedTasksNum = document.querySelector('.to-do-Num');
 const complatedTasksNum = document.querySelector('.done');
 const complated = document.querySelector('.complated');
-const audio = document.querySelector('audio');
+const audioFinish = document.querySelector('#audioFinish');
+const audioDelete = document.querySelector('#audioDelete')
 
 // Set current date
 const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -104,6 +105,7 @@ window.deleteTask = function(index) {
     currentTasks.splice(index, 1);
     localStorage.setItem('uncomplatedTasks', JSON.stringify(currentTasks));
     updateTasks();
+    audioDelete.play();
 };
 
 // Mark task as finished - must be global to be accessible from HTML
@@ -116,7 +118,7 @@ window.finishTask = function(index) {
     localStorage.setItem('complatedTasks', JSON.stringify(complatedTasks));
     
     updateTasks();
-    audio.play();
+    audioFinish.play();
 };
 
 // Initialize the task lists on page load
